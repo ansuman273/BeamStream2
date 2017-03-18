@@ -16,6 +16,6 @@ Project set up
    nodemon (if you have nodemon install globally)
    or
    npm start
-# please sign up to
+# please sign up to access the application
 
 # The video manage/streaming part is in progress..
