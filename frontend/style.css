@@ -1,0 +1,16 @@
+app {
+}
+
+app-header,
+router-outlet,
+app-footer{
+}
+
+app-header {
+}
+
+router-outlet {
+}
+
+app-footer {
+}

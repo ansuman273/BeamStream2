@@ -1,0 +1,36 @@
+<h3><span class="glyphicon glyphicon-log-in"></span> Signup</h3>
+
+<!-- show any messages that come back with authentication -->
+<!--<% if (message.length > 0) { %>
+<div class="alert alert-danger"><%= message %></div>
+<% } %>-->
+
+<!-- SIGN UP FORM -->
+<form [formGroup]="signUpForm" (ngSubmit)="doSign($event)">
+    <div class="form-group" [ngClass]="{'has-error':!signUpForm.controls['username'].valid && signUpForm.controls['username'].touched}">
+        <label>Username</label>
+        <input type="text" placeholder="username" class="form-control" formControlName="username" name="username">
+        <div *ngIf="signUpForm.controls['username'].hasError('required') && signUpForm.controls['username'].touched" class="alert alert-danger">Please enter a username</div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':!signUpForm.controls['email'].valid && signUpForm.controls['email'].touched}">
+        <label>Email</label>
+        <input type="text" placeholder="email" class="form-control" formControlName="email" name="email">
+        <div *ngIf="signUpForm.controls['email'].hasError('required') && signUpForm.controls['email'].touched" class="alert alert-danger">Please enter a valid Email</div>
+    </div>
+    <div class="form-group" [ngClass]="{'has-error':!signUpForm.controls['password'].valid && signUpForm.controls['password'].touched}">
+        <label>Password</label>
+        <input type="password" placeholder="password" class="form-control" formControlName="password" name="password">
+        <div *ngIf="signUpForm.controls['password'].hasError('required') && signUpForm.controls['password'].touched" class="alert alert-danger">Set your password</div>
+    </div>
+
+    <button type="submit" class="btn btn-warning btn-lg" [disabled]="!signUpForm.valid">Signup</button>
+</form>
+<hr>
+
+<span class="col-md-6">Already have an account? <a [routerLink]="['../login']">Login</a></span>
+<span class="col-md-6">Or go <a [routerLink]="['']">home</a>.</span>
+<br/>
+<br/>
+
+
+

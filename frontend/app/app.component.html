@@ -1,0 +1,4 @@
+<app-header [hidden]="current_route == 'auth'"></app-header>
+<div ng-view></div>
+<router-outlet></router-outlet>
+<app-footer [hidden]="current_route == 'auth'"></app-footer>

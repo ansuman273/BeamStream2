@@ -1,0 +1,15 @@
+.grid {
+    position: relative;
+}
+
+.grid-item {
+    position: absolute;
+}
+
+.grid-item.moving {
+    z-index: z-index + 1;
+}
+
+.placeholder {
+    position: absolute;
+}

@@ -1,0 +1,36 @@
+
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="">Beam Stream</a></li>
+    <li class="breadcrumb-item active">Videos</li>
+</ol>
+
+<form class="well" (submit)="addVideo($event)">
+    <div class=" form-group">
+        <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Title of Video">
+    </div>
+    <div class=" form-group">
+       Video: <input type="file" [(ngModel)]="video" (change)="fileSelected($event.target.files[0])" name="video" class="form-control" placeholder="Choose Video">
+    </div>
+    <!--<div class=" form-group">
+        Poster: <input type="file" [(ngModel)]="poster" name="poster" class="form-control" placeholder="Choose poster">
+    </div><div class=" form-group">
+        Channel Image:<input type="file" [(ngModel)]="channelImg" name="channelImg" class="form-control" placeholder="Choose Channel Image">
+    </div>-->
+    <button type="submit" class="btn btn-warning btn-lg" >Upload Video</button>
+</form>
+
+<!--
+<div class="video-list">
+    <div *ngFor="let task of tasks">
+        <div class="col-md-1">
+            <input type="checkbox" [checked]="task.isDone" (click)="updateStatus(task)">
+        </div>
+        <div class="col-md-7">
+            {{task.title}}
+        </div>
+        <div class="col-md-4">
+            <input type="button" (click)="deleteTask(task._id)" value="Delete" class="btn btn-danger">
+        </div>
+        <br/><br/>
+    </div>
+</div>-->
